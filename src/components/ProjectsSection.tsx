@@ -11,22 +11,28 @@ const ProjectsSection = () => {
 
   const projects = [
     {
+      title: "Zairza Clone",
+      description: "A modern clone of our technical club Zairza's fest website. Built with pure HTML, CSS, and JavaScript featuring responsive design and smooth animations.",
+      tech: ["HTML", "CSS", "JavaScript", "Responsive Design"],
+      color: "from-purple-500 to-pink-500",
+      liveUrl: "https://pinkkman.github.io/zairzaClone/",
+      codeUrl: "https://github.com/pinkkman/zairzaClone"
+    },
+    {
       title: "E-Commerce Platform",
       description: "A modern, scalable e-commerce solution built with React, Node.js, and PostgreSQL. Features real-time inventory management and advanced analytics.",
       tech: ["React", "Node.js", "PostgreSQL", "Redis"],
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "AI-Powered Dashboard",
-      description: "Intelligent analytics dashboard with machine learning insights. Built with Python, TensorFlow, and React for seamless data visualization.",
-      tech: ["Python", "TensorFlow", "React", "D3.js"],
-      color: "from-blue-500 to-cyan-500"
+      color: "from-blue-500 to-cyan-500",
+      liveUrl: "#",
+      codeUrl: "#"
     },
     {
       title: "Creative Portfolio",
       description: "Award-winning portfolio website with advanced animations and WebGL effects. Showcasing the perfect blend of art and technology.",
       tech: ["Three.js", "GSAP", "WebGL", "Blender"],
-      color: "from-green-500 to-emerald-500"
+      color: "from-green-500 to-emerald-500",
+      liveUrl: "#",
+      codeUrl: "#"
     }
   ];
 
@@ -133,22 +139,26 @@ const ProjectsSection = () => {
                     viewport={{ once: true }}
                     className="flex gap-4 pt-4"
                   >
-                    <motion.button
-                      className="px-6 py-3 bg-gradient-primary text-primary-foreground rounded-lg font-medium link-hover"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      data-cursor-hover
-                    >
-                      Live Demo
-                    </motion.button>
-                    <motion.button
-                      className="px-6 py-3 border border-primary text-primary rounded-lg font-medium link-hover"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      data-cursor-hover
-                    >
-                      View Code
-                    </motion.button>
+                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                      <motion.button
+                        className="px-6 py-3 bg-gradient-primary text-primary-foreground rounded-lg font-medium link-hover"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        data-cursor-hover
+                      >
+                        Live Demo
+                      </motion.button>
+                    </a>
+                    <a href={project.codeUrl} target="_blank" rel="noopener noreferrer">
+                      <motion.button
+                        className="px-6 py-3 border border-primary text-primary rounded-lg font-medium link-hover"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        data-cursor-hover
+                      >
+                        View Code
+                      </motion.button>
+                    </a>
                   </motion.div>
                 </motion.div>
 

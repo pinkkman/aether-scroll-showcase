@@ -14,7 +14,8 @@ const AboutSection = () => {
 
   const skills = [
     "JavaScript", "C++", "C", "React", "Node.js", "Express.js",
-    "HTML", "CSS", "Bootstrap", "EJS", "Git", "GitHub", "DSA", "OOPs", "RESTful APIs"
+    "HTML", "CSS", "Bootstrap", "EJS", "Git", "GitHub", "DSA", "OOPs", "RESTful APIs",
+    "MongoDB", "SQL", "Linux"
   ];
 
   return (
