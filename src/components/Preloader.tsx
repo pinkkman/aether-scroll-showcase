@@ -37,8 +37,8 @@ const Preloader = ({ onLoadComplete }: PreloaderProps) => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="mb-8"
         >
-          <h1 className="text-6xl md:text-8xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-            PORTFOLIO
+          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+            Crafting Experiences...
           </h1>
         </motion.div>
         

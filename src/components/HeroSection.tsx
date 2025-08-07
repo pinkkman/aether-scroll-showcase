@@ -31,7 +31,7 @@ const HeroSection = () => {
             className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
             delay={0.1}
           >
-            Passionate Computer Engineering student with a knack for web development, data structures, and cracking tough problems—driven to build smart solutions and thrive in the fast-paced tech world.
+            Engineering brain meets frontend finesse — coding clean, cracking logic, and crafting impact
           </TextReveal>
         </motion.div>
 
