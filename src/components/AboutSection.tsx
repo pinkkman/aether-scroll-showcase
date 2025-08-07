@@ -91,7 +91,7 @@ const AboutSection = () => {
           >
             <div className="w-80 h-96 bg-gradient-primary rounded-2xl shadow-accent overflow-hidden">
               <img 
-                src="/lovable-uploads/25eb3ad6-0a38-4c28-8dc4-3fb978240d0d.png" 
+                src="/lovable-uploads/67466eb8-72b8-4219-a263-4a8f342354d1.png" 
                 alt="Misbah Ur Rahman" 
                 className="w-full h-full object-cover"
               />
