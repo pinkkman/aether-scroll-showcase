@@ -13,7 +13,7 @@ const HeroSection = () => {
         >
           <h1 className="text-7xl md:text-9xl lg:text-[12rem] font-bold leading-none">
             <span className="block bg-gradient-primary bg-clip-text text-transparent">
-              CREATIVE
+              SOFTWARE
             </span>
             <span className="block text-foreground glitch" data-text="DEVELOPER">
               DEVELOPER
@@ -31,8 +31,7 @@ const HeroSection = () => {
             className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
             delay={0.1}
           >
-            Crafting digital experiences that blend innovation with artistry. 
-            Passionate about creating immersive web applications that push the boundaries of what's possible.
+            Passionate Computer Engineering student with a knack for web development, data structures, and cracking tough problems—driven to build smart solutions and thrive in the fast-paced tech world.
           </TextReveal>
         </motion.div>
 

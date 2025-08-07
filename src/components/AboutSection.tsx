@@ -13,8 +13,8 @@ const AboutSection = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
 
   const skills = [
-    "React", "TypeScript", "Node.js", "Three.js", "GSAP", "WebGL",
-    "Python", "Docker", "AWS", "GraphQL", "Next.js", "Framer Motion"
+    "JavaScript", "C++", "C", "React", "Node.js", "Express.js",
+    "HTML", "CSS", "Bootstrap", "EJS", "Git", "GitHub", "DSA", "OOPs", "RESTful APIs"
   ];
 
   return (
@@ -41,19 +41,14 @@ const AboutSection = () => {
             className="text-lg md:text-xl text-muted-foreground leading-relaxed"
             delay={0.2}
           >
-            I'm a passionate full-stack developer with over 5 years of experience 
-            creating digital experiences that matter. My journey began with curiosity 
-            about how websites work, and has evolved into a deep love for crafting 
-            elegant solutions to complex problems.
+            I'm a passionate Computer Engineering student at OUTR - Bhubaneswar with a strong foundation in web development, data structures, and algorithms. I thrive in the fast-paced tech world, building smart solutions and tackling challenging problems with modern technologies.
           </TextReveal>
 
           <TextReveal
             className="text-lg md:text-xl text-muted-foreground leading-relaxed"
             delay={0.4}
           >
-            When I'm not coding, you can find me exploring new technologies, 
-            contributing to open source projects, or experimenting with creative 
-            coding and generative art.
+            Enthusiastic about AI and web development, I enjoy coding competitions, outdoor activities, and continuous learning through projects. Completed schooling from DPS Rourkela in 2024 with strong academic and technical leadership background.
           </TextReveal>
 
           <motion.div
