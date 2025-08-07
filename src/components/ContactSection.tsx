@@ -12,10 +12,9 @@ const ContactSection = () => {
   const y = useTransform(scrollYProgress, [0, 1], [50, -50]);
 
   const contactMethods = [
-    { label: "Email", value: "hello@portfolio.dev", icon: "📧" },
-    { label: "LinkedIn", value: "/in/portfolio", icon: "💼" },
-    { label: "GitHub", value: "@portfolio", icon: "🐙" },
-    { label: "Twitter", value: "@portfolio", icon: "🐦" }
+    { label: "Email", value: "misbahstudies123@gmail.com", icon: "📧", link: "mailto:misbahstudies123@gmail.com" },
+    { label: "LinkedIn", value: "Misbah Ur Rahman", icon: "💼", link: "https://www.linkedin.com/in/misbah-ur-rahman-43b4b0341/" },
+    { label: "GitHub", value: "@pinkkman", icon: "🐙", link: "https://github.com/pinkkman" }
   ];
 
   return (
@@ -74,7 +73,7 @@ const ContactSection = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           viewport={{ once: true }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-8"
+          className="grid grid-cols-1 md:grid-cols-3 gap-8"
         >
           {contactMethods.map((method, index) => (
             <motion.div
@@ -85,15 +84,17 @@ const ContactSection = () => {
               viewport={{ once: true }}
               className="group"
             >
-              <motion.div
-                className="p-6 bg-card border border-border rounded-xl hover:border-primary transition-all duration-300 link-hover"
-                whileHover={{ y: -5 }}
-                data-cursor-hover
-              >
-                <div className="text-3xl mb-3">{method.icon}</div>
-                <h3 className="font-semibold text-foreground mb-2">{method.label}</h3>
-                <p className="text-sm text-muted-foreground">{method.value}</p>
-              </motion.div>
+              <a href={method.link} target="_blank" rel="noopener noreferrer">
+                <motion.div
+                  className="p-6 bg-card border border-border rounded-xl hover:border-primary transition-all duration-300 link-hover"
+                  whileHover={{ y: -5 }}
+                  data-cursor-hover
+                >
+                  <div className="text-3xl mb-3">{method.icon}</div>
+                  <h3 className="font-semibold text-foreground mb-2">{method.label}</h3>
+                  <p className="text-sm text-muted-foreground">{method.value}</p>
+                </motion.div>
+              </a>
             </motion.div>
           ))}
         </motion.div>
@@ -106,7 +107,7 @@ const ContactSection = () => {
           className="mt-20 pt-8 border-t border-border"
         >
           <p className="text-muted-foreground">
-            © 2024 Portfolio. Crafted with passion and caffeine.
+            © 2025 Portfolio by Pinkman
           </p>
         </motion.div>
       </div>

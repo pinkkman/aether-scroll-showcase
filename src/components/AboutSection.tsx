@@ -88,8 +88,12 @@ const AboutSection = () => {
             viewport={{ once: true }}
             className="relative z-10"
           >
-            <div className="w-80 h-96 bg-gradient-primary rounded-2xl shadow-accent flex items-center justify-center">
-              <span className="text-6xl">👨‍💻</span>
+            <div className="w-80 h-96 bg-gradient-primary rounded-2xl shadow-accent overflow-hidden">
+              <img 
+                src="/lovable-uploads/25eb3ad6-0a38-4c28-8dc4-3fb978240d0d.png" 
+                alt="Misbah Ur Rahman" 
+                className="w-full h-full object-cover"
+              />
             </div>
           </motion.div>
 
