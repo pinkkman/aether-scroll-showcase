@@ -25,7 +25,7 @@ const AboutSection = () => {
       style={{ opacity }}
     >
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
-        <motion.div style={{ y }} className="space-y-8">
+        <motion.div style={{ y }} className="space-y-8 bg-background/70 backdrop-blur-md md:bg-transparent md:backdrop-blur-0 rounded-2xl p-4 sm:p-6 md:p-0 shadow-accent">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}

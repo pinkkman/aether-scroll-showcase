@@ -39,10 +39,10 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1 }}
-          className="flex flex-col md:flex-row gap-6 justify-center items-center"
+          className="flex w-full max-w-md mx-auto flex-col sm:flex-row gap-3 sm:gap-6 justify-center items-stretch sm:items-center"
         >
           <motion.button
-            className="px-8 py-4 bg-gradient-primary text-primary-foreground rounded-lg font-semibold text-lg relative overflow-hidden group"
+            className="w-full sm:w-auto px-6 md:px-8 py-3 md:py-4 bg-gradient-primary text-primary-foreground rounded-lg font-semibold text-base md:text-lg relative overflow-hidden group"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             data-cursor-hover
@@ -52,7 +52,7 @@ const HeroSection = () => {
           </motion.button>
 
           <motion.button
-            className="px-8 py-4 border border-primary text-primary rounded-lg font-semibold text-lg link-hover"
+            className="w-full sm:w-auto px-6 md:px-8 py-3 md:py-4 border border-primary text-primary rounded-lg font-semibold text-base md:text-lg link-hover"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             data-cursor-hover
