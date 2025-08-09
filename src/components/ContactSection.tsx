@@ -19,8 +19,9 @@ const ContactSection = () => {
 
   return (
     <motion.section
+      id="contact"
       ref={sectionRef}
-      className="min-h-screen flex items-center justify-center px-6 py-20"
+      className="relative min-h-screen flex items-center justify-center px-6 py-20"
       style={{ y }}
     >
       <div className="max-w-4xl mx-auto text-center">

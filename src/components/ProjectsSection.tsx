@@ -38,8 +38,9 @@ const ProjectsSection = () => {
 
   return (
     <motion.section
+      id="projects"
       ref={sectionRef}
-      className="min-h-screen py-20 px-6"
+      className="relative min-h-screen py-20 px-6"
     >
       <div className="max-w-7xl mx-auto">
         <motion.div
