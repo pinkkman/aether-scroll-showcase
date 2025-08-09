@@ -24,7 +24,7 @@ const AboutSection = () => {
       className="min-h-screen flex items-center justify-center px-6 py-20"
       style={{ opacity }}
     >
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
         <motion.div style={{ y }} className="space-y-8">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -89,11 +89,12 @@ const AboutSection = () => {
             viewport={{ once: true }}
             className="relative z-10"
           >
-            <div className="w-80 h-96 bg-gradient-primary rounded-2xl shadow-accent overflow-hidden">
+            <div className="w-56 sm:w-64 md:w-72 lg:w-80 aspect-[3/4] bg-gradient-primary rounded-2xl shadow-accent overflow-hidden">
               <img 
                 src="/lovable-uploads/67466eb8-72b8-4219-a263-4a8f342354d1.png" 
                 alt="Misbah Ur Rahman" 
                 className="w-full h-full object-cover"
+                loading="lazy"
               />
             </div>
           </motion.div>

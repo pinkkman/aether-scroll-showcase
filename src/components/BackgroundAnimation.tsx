@@ -1,6 +1,7 @@
 import { Canvas } from "@react-three/fiber";
-import { Suspense, useRef } from "react";
+import { Suspense, useRef, useMemo } from "react";
 import { useFrame } from "@react-three/fiber";
+import { OrbitControls, AdaptiveDpr } from "@react-three/drei";
 import * as THREE from "three";
 
 const AnimatedSphere = () => {
@@ -76,14 +77,20 @@ const FloatingParticles = () => {
     }
   });
 
-  const particlesCount = 50;
-  const positions = new Float32Array(particlesCount * 3);
+  const particlesCount = useMemo(() => {
+    if (typeof window !== "undefined" && window.innerWidth < 640) return 60;
+    return 120;
+  }, []);
 
-  for (let i = 0; i < particlesCount; i++) {
-    positions[i * 3] = (Math.random() - 0.5) * 10;
-    positions[i * 3 + 1] = (Math.random() - 0.5) * 10;
-    positions[i * 3 + 2] = (Math.random() - 0.5) * 10;
-  }
+  const positions = useMemo(() => {
+    const arr = new Float32Array(particlesCount * 3);
+    for (let i = 0; i < particlesCount; i++) {
+      arr[i * 3] = (Math.random() - 0.5) * 10;
+      arr[i * 3 + 1] = (Math.random() - 0.5) * 10;
+      arr[i * 3 + 2] = (Math.random() - 0.5) * 10;
+    }
+    return arr;
+  }, [particlesCount]);
 
   return (
     <points ref={particlesRef}>
@@ -95,7 +102,15 @@ const FloatingParticles = () => {
           itemSize={3}
         />
       </bufferGeometry>
-      <pointsMaterial size={0.05} color="#B445F5" />
+      <pointsMaterial
+        size={0.05}
+        sizeAttenuation
+        color="#B445F5"
+        transparent
+        opacity={0.6}
+        depthWrite={false}
+        blending={THREE.AdditiveBlending}
+      />
     </points>
   );
 };
@@ -103,10 +118,16 @@ const FloatingParticles = () => {
 const BackgroundAnimation = () => {
   return (
     <div className="fixed inset-0 -z-10">
-      <Canvas camera={{ position: [0, 0, 5], fov: 75 }}>
+      <Canvas
+        camera={{ position: [0, 0, 5], fov: 75 }}
+        dpr={[0.75, 2]}
+        gl={{ powerPreference: "high-performance", antialias: true, alpha: true }}
+      >
         <Suspense fallback={null}>
           <AnimatedSphere />
           <FloatingParticles />
+          <OrbitControls enablePan={false} enableZoom={false} autoRotate autoRotateSpeed={0.2} />
+          <AdaptiveDpr pixelated />
         </Suspense>
       </Canvas>
     </div>
